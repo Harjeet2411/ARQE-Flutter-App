@@ -1,6 +1,10 @@
+import 'dart:io';
+
 import 'package:arqe/data/model_data.dart';
+import 'package:arqe/screens/web_view.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
+import 'package:webview_flutter/webview_flutter.dart';
 
 import '../widgets/model_tile.dart';
 
@@ -12,6 +16,12 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  @override
+  void initState() {
+    super.initState();
+    if (Platform.isAndroid) WebView.platform = AndroidWebView();
+  }
+
   List<ModelData> models = [
     ModelData(
         'https://cdn.glitch.global/4bf9f3b5-e28d-48f3-aadd-6c11bbfc954f/Astronaut.glb?v=1649417799534',
@@ -46,6 +56,14 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+          backgroundColor: Colors.white,
+          child: const Icon(
+            Icons.search,
+            color: Colors.black,
+          ),
+          onPressed: () => Navigator.push(
+              context, MaterialPageRoute(builder: (context) => SearchPage()))),
       appBar: AppBar(
         backgroundColor: Colors.white12,
         title: const Text("ARQe"),

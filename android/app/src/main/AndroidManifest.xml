@@ -1,5 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.arqe_1">
+   <uses-permission android:name="android.permission.INTERNET"/>
    <application
         android:label="arqe_1"
         android:name="${applicationName}"
