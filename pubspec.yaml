@@ -33,6 +33,17 @@ dependencies:
   model_viewer_plus: ^1.1.5
   sizer: ^2.0.15
   webview_flutter: ^3.0.2
+  provider: ^4.1.3
+  flutter_svg: ^1.0.3
+  introduction_screen: ^1.0.9
+  firebase_core: ^1.13.1
+  firebase_auth: ^3.3.9
+  modal_progress_hud: ^0.1.3
+  animated_text_kit: ^1.3.0
+  email_validator: ^2.0.1
+  http: ^0.13.4
+  html: ^0.15.0
+  url_launcher: ^6.0.20
 
 dev_dependencies:
   flutter_lints: ^1.0.0

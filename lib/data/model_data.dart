@@ -2,8 +2,8 @@ class ModelData {
   final String? model;
   final String? img;
   final String? title;
-
-  ModelData(this.model, this.img, this.title);
+  final String? content;
+  ModelData(this.model, this.img, this.title, this.content);
 
   // List<ModelData> models = [
   //   ModelData(

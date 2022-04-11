@@ -8,12 +8,14 @@ class ModelTile extends StatelessWidget {
   final String? img;
   final String? title;
   final String? src;
-  const ModelTile({
-    Key? key,
-    required this.img,
-    required this.title,
-    required this.src,
-  }) : super(key: key);
+  final String? content;
+  const ModelTile(
+      {Key? key,
+      required this.img,
+      required this.title,
+      required this.src,
+      required this.content})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -27,6 +29,7 @@ class ModelTile extends StatelessWidget {
                       src: src,
                       title: title,
                       img: img!,
+                      content: content!,
                     ))),
         child: Container(
           height: 35.h,
